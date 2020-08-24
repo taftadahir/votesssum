@@ -19,8 +19,8 @@ Route::get('/', function () {
 });
 Route::post('/votes', function (Request $request) {
     // Stoquer l'email
-    return $request['email'];
-    return view('votes');
+    // return $request['email'];
+    return view('votes',['email'=>$request['email']]);
 })->name("votes");
 Route::get('/results', function () {
     // Stoquer l'email

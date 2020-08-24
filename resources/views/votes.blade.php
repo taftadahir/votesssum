@@ -56,7 +56,7 @@
                 });
             });
 
-            form.addEventListener('submit', e => {
+            {{--  form.addEventListener('submit', e => {
                 e.preventDefault();
 
                 // Ajout du mail dans l'array
@@ -70,7 +70,7 @@
                     {{--  candidats[i].classList.remove('hide');  --}}
                     // results[i].classList.remove('hide');
                 }
-            });
+            });  --}}
         });
     </script>
     <style>
@@ -343,9 +343,9 @@
             <img class="img-fluid logo rounded" src="{{asset('imgs/04bb29011217e6117774931db30677f2.jpg')}}" alt="">
         </div>
     </header>
-
+<input type="email" name="email" id="email" value="{{ $email }}">
     <!-- Deuxieme page -->
-    <div class="container d-flex flex-column align-items-center second-page-president page-container hide candidat">
+    <div class="container d-flex flex-column align-items-center second-page-president page-container candidat">
         <h2>Candidat au poste de president</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
@@ -365,7 +365,7 @@
             </div>
         </div>
     </div>
-    <div class="container second-page-secretaire d-flex flex-column align-items-center page-container hide candidat">
+    <div class="container second-page-secretaire d-flex flex-column align-items-center page-container candidat">
         <h2>Candidat au poste de secretaire</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
