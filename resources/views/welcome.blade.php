@@ -15,6 +15,7 @@
             const results = document.querySelectorAll('.result');
             const votePresidentBtns = document.querySelectorAll('.second-page-president .box-user>button');
             const voteSecretaireBtns = document.querySelectorAll('.second-page-secretaire .box-user>button');
+            let votes = []
 
             const clearBtns = voteBtns => {
                 voteBtns.forEach(voteBtn => {
@@ -25,9 +26,15 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(votePresidentBtns);
+                        const elt = votes.find(elt => elt.email === form.email.value);
+                        elt.president = undefined;
+                        console.log(votes);
                     } else {
                         clearBtns(votePresidentBtns);
                         e.target.textContent = "Voted";
+                        const elt = votes.find(elt => elt.email === form.email.value);
+                        elt.president = e.target.value;
+                        console.log(votes);
                     }
                 });
             });
@@ -36,18 +43,32 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(voteSecretaireBtns);
+                        const elt = votes.find(elt => elt.email === form.email.value);
+                        elt.secretaire = undefined;
+                        console.log(votes);
                     } else {
                         clearBtns(voteSecretaireBtns);
                         e.target.textContent = "Voted";
+                        const elt = votes.find(elt => elt.email === form.email.value);
+                        elt.secretaire = e.target.value;
+                        console.log(votes);
                     }
                 });
             });
 
             form.addEventListener('submit', e => {
                 e.preventDefault();
+
+                // Ajout du mail dans l'array
+                if (!(votes.find(elt => elt.email === form.email.value))) {
+                    votes.push({ email: form.email.value, president: undefined, secretaire: undefined });
+                }
+
                 for (let i = 0; i < 2; i++) {
+                    // console.log(firstPages[i]);
                     firstPages[i].classList.add('hide');
                     candidats[i].classList.remove('hide');
+                    // results[i].classList.remove('hide');
                 }
             });
         });
@@ -339,17 +360,17 @@
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="A">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="B">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="C">Vote</button>
             </div>
         </div>
     </div>
@@ -359,32 +380,32 @@
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="A">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="B">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="C">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="D">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="E">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
-                <button class="btn btn-dark w-100">Vote</button>
+                <button class="btn btn-dark w-100" value="F">Vote</button>
             </div>
         </div>
     </div>
