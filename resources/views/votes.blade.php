@@ -419,6 +419,15 @@
         </div>
     </div>
 
+    <div class="container">
+        <form action="{{ route('valider') }}" method="POST" class="container mt-5 d-flex flex-column align-items-center first-page-form first-page"  enctype="multipart/form-data">
+            @csrf
+            @method("POST")
+            <input class="form-control" type="email" name="email" hidden value="{{ $email }}">
+            <button type="submit" class="btn btn-primary w-100">Validate</button>
+        </form>
+    </div>
+
     <footer class="footer">
         <div class="container-xl flex-sm-row flex-column d-flex justify-content-sm-between justify-content-center align-items-center h-100">
             <span>SSSUM#2020Election</span>

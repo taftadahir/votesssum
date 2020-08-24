@@ -286,7 +286,7 @@
         @csrf
         @method("POST")
         <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-dark">Access vote</button>
+        <button type="submit" class="btn btn-primary">Access vote</button>
     </form>
 
     <footer class="footer">

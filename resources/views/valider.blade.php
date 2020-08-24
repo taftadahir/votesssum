@@ -90,11 +90,11 @@
             height: 240px;
             -o-object-fit: cover;
                object-fit: cover;
-            border-radius: 10px;
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
+            border-radius: 10px 10px 0 0;
+            -webkit-border-radius: 10px 10px 0 0;
+            -moz-border-radius: 10px 10px 0 0;
+            -ms-border-radius: 10px 10px 0 0;
+            -o-border-radius: 10px 10px 0 0;
           }
 
           .page-container .box-user h3 {
@@ -263,6 +263,12 @@
               font-size: 12px;
             }
           }
+          footer{
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+          }
     </style>
 </head>
 
@@ -278,107 +284,18 @@
         </div>
     </header>
 
-    <!-- Troisieme page -->
-    <div class="container page-container third-page-container result">
-        <h2>Resultat des elections au poste de President</h2>
-        <div class="d-flex flex-wrap justify-content-center">
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>
-                        {{$presidents['A']/$totalPresident*100}}%
-                    </span>
-                    <span>({{$presidents['A']}}/{{$totalPresident}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$presidents['B']/$totalPresident*100}}%</span>
-                    <span>({{$presidents['B']}}/{{$totalPresident}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$presidents['C']/$totalPresident*100}}%</span>
-                    <span>({{$presidents['C']}}/{{$totalPresident}} votes)</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container page-container third-page-container result">
-        <h2>Resultat des elections au poste de secretaire</h2>
-        <div class=" d-flex flex-wrap justify-content-center">
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$secretaires['A']/$totalSecretaire*100}}%</span>
-                    <span>({{$secretaires['A']}}/{{$totalSecretaire}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$secretaires['B']/$totalSecretaire*100}}%</span>
-                    <span>({{$secretaires['B']}}/{{$totalSecretaire}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['C']/$totalSecretaire*100}}%</span>
-                    <span>({{$secretaires['C']}}/{{$totalSecretaire}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['D']/$totalSecretaire*100}}%</span>
-                    <span>({{$secretaires['D']}}/{{$totalSecretaire}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['E']/$totalSecretaire*100}}%</span>
-                    <span>({{$secretaires['E']}}/{{$totalSecretaire}} votes)</span>
-                </div>
-            </div>
-            <div class=" d-flex flex-column flex-sm-row">
-                <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
-                </div>
-                <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['F']/$totalSecretaire*100}}%</span>
-                    <span>({{$secretaires['F']}}/{{$totalSecretaire}} votes)</span>
-                </div>
-            </div>
+    <div class="container-xl">
+        <div class="alert alert-success my-5" role="alert">
+            <h4 class="alert-heading">Your votes have been successfully registered!</h4>
+
+                <form action="{{ route('votes') }}" class="d-inline" method="POST" id="myForm" enctype="multipart/form-data">
+                    @csrf
+                    @method("POST")
+                    <input class="form-control" type="email" name="email" hidden value="{{ $email }}">
+                    <p class="d-inline">Incase if you made a mistake in your voting choice, you can make a new choice by clicking the link  </p>
+                    <a type="submit" onclick="document.querySelector('#myForm').submit()" class=""><u>Access vote</u></a>
+                </form>
+
         </div>
     </div>
 

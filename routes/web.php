@@ -20,9 +20,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::post('/votes', function (Request $request) {
-    // Stoquer l'email
-    // return $request['email'];
-    return view('votes',['email'=>$request['email']]);
+    // Verifier que l'email exists
+    $emails = [
+        "taftadjani@gmail.com"
+    ];
+    $email_verif=false;
+    for ($i=0; $i < count($emails); $i++) {
+        if ($request['email'] === $emails[$i]) {
+            $email_verif=true;
+        break;
+        }
+    }
+    if ($email_verif) {
+        return view('votes',['email'=>$request['email']]);
+    }else{
+        return redirect()->back();
+    }
 })->name("votes");
 Route::get('/results', function () {
     $presidents=[
@@ -38,8 +51,8 @@ Route::get('/results', function () {
         "E"=>0,
         "F"=>0,
     ];
-    // $secretaires=["A","B"];
-    $votes=Vote::all();
+    $totalPresident = 0;
+    $totalSecretaire = 0;
     $presidentsGrouped = DB::table('votes')
                  ->select('president', DB::raw('count(*) as total'))
                  ->groupBy('president')
@@ -65,8 +78,14 @@ Route::get('/results', function () {
             }
         }
     }
+    foreach ($presidents as $key => $value) {
+        $totalPresident +=$presidents[$key];
+    }
+    foreach ($secretaires as $key => $value) {
+        $totalSecretaire += $secretaires[$key];
+    }
     // return $secretaires;
-    return view('results',['total'=>($votes->count()==0?1:$votes->count()), 'presidents'=>$presidents, 'secretaires'=>$secretaires]);
+    return view('results',['totalSecretaire'=>$totalSecretaire,'totalPresident'=>$totalPresident, 'presidents'=>$presidents, 'secretaires'=>$secretaires]);
 })->name("results");
 
 Route::post('/updateVote', function (Request $request) {
@@ -94,3 +113,9 @@ Route::get('/all', function () {
     // Stoquer l'update
     return Vote::all();
 })->name("all");
+
+Route::post('/valider', function (Request $request) {
+    // Stoquer l'update
+    $email =  $request->email;
+    return view('valider', compact("email"));
+})->name("valider");
