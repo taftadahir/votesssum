@@ -26,6 +26,7 @@ Route::get('/results', function () {
     // Stoquer l'email
     return view('results');
 })->name("results");
+
 Route::post('/updateVote', function (Request $request) {
-    return $request['email'];
+    return "Hi";
 })->name("update");

@@ -47,9 +47,23 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(voteSecretaireBtns);
+                        $.post("{{ route('update') }}",{
+                            "email":"{{ $email }}",
+                            "president":null,
+                            "secretaire":null
+                        }, function(data, status){
+                            console.log(data);
+                        });
                     } else {
                         clearBtns(voteSecretaireBtns);
                         e.target.textContent = "Voted";
+                        $.post("{{ route('update') }}",{
+                            "email":"{{ $email }}",
+                            "president":null,
+                            "secretaire":e.target.value
+                        }, function(data, status){
+                            console.log(data);
+                        });
                     }
                 });
             });
