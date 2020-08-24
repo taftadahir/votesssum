@@ -23,10 +23,11 @@ Route::post('/votes', function (Request $request) {
     return view('votes',['email'=>$request['email']]);
 })->name("votes");
 Route::get('/results', function () {
-    // Stoquer l'email
+
     return view('results');
 })->name("results");
 
 Route::post('/updateVote', function (Request $request) {
-    return $request;
+    // Stoquer l'update
+    return redirect()->back();
 })->name("update");
