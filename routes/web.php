@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::post('/votes', function () {
+    // Stoquer l'email
+    return view('votes');
+})->name("votes");
+Route::get('/results', function () {
+    // Stoquer l'email
+    return view('results');
+})->name("results");

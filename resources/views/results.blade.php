@@ -344,15 +344,77 @@
         </div>
     </header>
 
-    <!-- Premiere page -->
-    <div class="container first-page-content first-page">
-        Considering the situation of covid-19 pandemie, we decided to make this election through our Online platform for voting. It's open for all South Sudanese Students in the Kingdom of Morocco.
+    <!-- Troisieme page -->
+    <div class="container page-container third-page-container hide result">
+        <h2>Resultat des elections au poste de President</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center">
+                    <span>50%</span>
+                    <span>(200/400 votes)</span>
+                </div>
+            </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center">
+                    <span>50%</span>
+                    <span>(200/400 votes)</span>
+                </div>
+            </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center">
+                    <span>50%</span>
+                    <span>(200/400 votes)</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <form action="{{ route('votes') }}" method="POST" class="container mt-5 d-flex flex-column align-items-center first-page-form first-page"  enctype="multipart/form-data">
-        @csrf
-        <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-dark">Access vote</button>
-    </form>
+    <div class="container page-container third-page-container hide result">
+        <h2>Resultat des elections au poste de secretaire</h2>
+        <div class=" d-flex flex-wrap justify-content-center">
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center">
+                    <span>50%</span>
+                    <span>(200/400 votes)</span>
+                </div>
+            </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center">
+                    <span>50%</span>
+                    <span>(200/400 votes)</span>
+                </div>
+            </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center ">
+                    <span>50%</span>
+                    <span>(200/400 votes)</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container-xl flex-sm-row flex-column d-flex justify-content-sm-between justify-content-center align-items-center h-100">

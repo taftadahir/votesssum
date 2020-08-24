@@ -344,15 +344,62 @@
         </div>
     </header>
 
-    <!-- Premiere page -->
-    <div class="container first-page-content first-page">
-        Considering the situation of covid-19 pandemie, we decided to make this election through our Online platform for voting. It's open for all South Sudanese Students in the Kingdom of Morocco.
+    <!-- Deuxieme page -->
+    <div class="container d-flex flex-column align-items-center second-page-president page-container hide candidat">
+        <h2>Candidat au poste de president</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="A">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="B">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="C">Vote</button>
+            </div>
+        </div>
     </div>
-    <form action="{{ route('votes') }}" method="POST" class="container mt-5 d-flex flex-column align-items-center first-page-form first-page"  enctype="multipart/form-data">
-        @csrf
-        <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-dark">Access vote</button>
-    </form>
+    <div class="container second-page-secretaire d-flex flex-column align-items-center page-container hide candidat">
+        <h2>Candidat au poste de secretaire</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="A">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="B">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="C">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="D">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="E">Vote</button>
+            </div>
+            <div class="box-user">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                <h3>Cruz Stevens</h3>
+                <button class="btn btn-dark w-100" value="F">Vote</button>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container-xl flex-sm-row flex-column d-flex justify-content-sm-between justify-content-center align-items-center h-100">
