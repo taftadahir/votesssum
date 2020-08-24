@@ -26,15 +26,29 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(votePresidentBtns);
-                        const elt = votes.find(elt => elt.email === form.email.value);
+                        $.post("{{ route('update') }}",{
+                            "email":{{ $email }},
+                            "president":null,
+                            "secretaire":null
+                        }, function(data, status){
+                            console.log(data);
+                        });
+                        {{--  const elt = votes.find(elt => elt.email === form.email.value);
                         elt.president = undefined;
-                        console.log(votes);
+                        console.log(votes);  --}}
                     } else {
                         clearBtns(votePresidentBtns);
+                        $.post("{{ route('update') }}",{
+                            "email":{{ $email }},
+                            "president":e.target.value,
+                            "secretaire":null
+                        }, function(data, status){
+                            console.log(data);
+                        });
                         e.target.textContent = "Voted";
-                        const elt = votes.find(elt => elt.email === form.email.value);
+                        {{--  const elt = votes.find(elt => elt.email === form.email.value);
                         elt.president = e.target.value;
-                        console.log(votes);
+                        console.log(votes);  --}}
                     }
                 });
             });
@@ -43,15 +57,29 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(voteSecretaireBtns);
-                        const elt = votes.find(elt => elt.email === form.email.value);
+                        $.post("{{ route('update') }}",{
+                            "email":{{ $email }},
+                            "president":null,
+                            "secretaire":null
+                        }, function(data, status){
+                            console.log(data);
+                        });
+                        {{--  const elt = votes.find(elt => elt.email === form.email.value);
                         elt.secretaire = undefined;
-                        console.log(votes);
+                        console.log(votes);  --}}
                     } else {
                         clearBtns(voteSecretaireBtns);
+                        $.post("{{ route('update') }}",{
+                            "email":{{ $email }},
+                            "president":null,
+                            "secretaire":e.target.value
+                        }, function(data, status){
+                            console.log(data);
+                        });
                         e.target.textContent = "Voted";
-                        const elt = votes.find(elt => elt.email === form.email.value);
+                        {{--  const elt = votes.find(elt => elt.email === form.email.value);
                         elt.secretaire = e.target.value;
-                        console.log(votes);
+                        console.log(votes);  --}}
                     }
                 });
             });
@@ -343,7 +371,9 @@
             <img class="img-fluid logo rounded" src="{{asset('imgs/04bb29011217e6117774931db30677f2.jpg')}}" alt="">
         </div>
     </header>
-<input type="email" name="email" id="email" value="{{ $email }}">
+
+    <input type="email" name="email" id="email" value="{{ $email }}" hidden>
+
     <!-- Deuxieme page -->
     <div class="container d-flex flex-column align-items-center second-page-president page-container candidat">
         <h2>Candidat au poste de president</h2>
