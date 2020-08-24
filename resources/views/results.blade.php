@@ -7,72 +7,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script defer>
-        $(function() {
-            const form = document.querySelector('.first-page-form');
-            const firstPages = document.querySelectorAll('.first-page');
-            const candidats = document.querySelectorAll('.candidat');
-            const results = document.querySelectorAll('.result');
-            const votePresidentBtns = document.querySelectorAll('.second-page-president .box-user>button');
-            const voteSecretaireBtns = document.querySelectorAll('.second-page-secretaire .box-user>button');
-            let votes = []
-
-            const clearBtns = voteBtns => {
-                voteBtns.forEach(voteBtn => {
-                    voteBtn.textContent = "Vote";
-                });
-            }
-            votePresidentBtns.forEach((voteBtn) => {
-                voteBtn.addEventListener('click', e => {
-                    if (e.target.textContent === "Voted") {
-                        clearBtns(votePresidentBtns);
-                        const elt = votes.find(elt => elt.email === form.email.value);
-                        elt.president = undefined;
-                        console.log(votes);
-                    } else {
-                        clearBtns(votePresidentBtns);
-                        e.target.textContent = "Voted";
-                        const elt = votes.find(elt => elt.email === form.email.value);
-                        elt.president = e.target.value;
-                        console.log(votes);
-                    }
-                });
-            });
-
-            voteSecretaireBtns.forEach((voteBtn) => {
-                voteBtn.addEventListener('click', e => {
-                    if (e.target.textContent === "Voted") {
-                        clearBtns(voteSecretaireBtns);
-                        const elt = votes.find(elt => elt.email === form.email.value);
-                        elt.secretaire = undefined;
-                        console.log(votes);
-                    } else {
-                        clearBtns(voteSecretaireBtns);
-                        e.target.textContent = "Voted";
-                        const elt = votes.find(elt => elt.email === form.email.value);
-                        elt.secretaire = e.target.value;
-                        console.log(votes);
-                    }
-                });
-            });
-
-            form.addEventListener('submit', e => {
-                e.preventDefault();
-
-                // Ajout du mail dans l'array
-                if (!(votes.find(elt => elt.email === form.email.value))) {
-                    votes.push({ email: form.email.value, president: undefined, secretaire: undefined });
-                }
-
-                for (let i = 0; i < 2; i++) {
-                    // console.log(firstPages[i]);
-                    firstPages[i].classList.add('hide');
-                    candidats[i].classList.remove('hide');
-                    // results[i].classList.remove('hide');
-                }
-            });
-        });
-    </script>
     <style>
         * {
             font-family: montserrat;
@@ -345,7 +279,7 @@
     </header>
 
     <!-- Troisieme page -->
-    <div class="container page-container third-page-container hide result">
+    <div class="container page-container third-page-container result">
         <h2>Resultat des elections au poste de President</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
@@ -354,8 +288,10 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>50%</span>
-                    <span>(200/400 votes)</span>
+                    <span>
+                        {{$presidents['A']/$total*100}}%
+                    </span>
+                    <span>({{$presidents['A']}}/{{$total}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
@@ -364,8 +300,8 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>50%</span>
-                    <span>(200/400 votes)</span>
+                    <span>{{$presidents['B']/$total*100}}%</span>
+                    <span>({{$presidents['B']}}/{{$total}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
@@ -374,13 +310,13 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>50%</span>
-                    <span>(200/400 votes)</span>
+                    <span>{{$presidents['C']/$total*100}}%</span>
+                    <span>({{$presidents['C']}}/{{$total}} votes)</span>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container page-container third-page-container hide result">
+    <div class="container page-container third-page-container result">
         <h2>Resultat des elections au poste de secretaire</h2>
         <div class=" d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
@@ -389,8 +325,8 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>50%</span>
-                    <span>(200/400 votes)</span>
+                    <span>{{$secretaires['A']/$total*100}}%</span>
+                    <span>({{$secretaires['A']/$total}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
@@ -399,8 +335,8 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>50%</span>
-                    <span>(200/400 votes)</span>
+                    <span>{{$secretaires['B']/$total*100}}%</span>
+                    <span>({{$secretaires['B']/$total}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
@@ -409,8 +345,8 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>50%</span>
-                    <span>(200/400 votes)</span>
+                    <span>{{$secretaires['C']/$total*100}}%</span>
+                    <span>({{$secretaires['C']/$total}} votes)</span>
                 </div>
             </div>
         </div>

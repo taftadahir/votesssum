@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Election SSSUM</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
@@ -10,7 +11,7 @@
     <script defer>
         $(function() {
             const votePresidentBtns = document.querySelectorAll('.second-page-president .box-user>button');
-            const myForm = document.getElementById('myForm');
+            const myForm=document.querySelector('#myForm');
             const voteSecretaireBtns = document.querySelectorAll('.second-page-secretaire .box-user>button');
 
             const clearBtns = voteBtns => {
@@ -23,14 +24,30 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(votePresidentBtns);
-                        myForm.president.value = null;
+                        myForm.president.value=null;
                     } else {
                         clearBtns(votePresidentBtns);
                         e.target.textContent = "Voted";
-                        myForm.president.value = e.target.value;
+                        myForm.president.value=e.target.value;
                     }
-                    {{--  Submit  --}}
-                    myForm.submit();
+
+                    $.ajaxSetup({
+                        headers:{
+                            'X-CSRF-TOKEN':$("meta[name='csrf-token']").attr('content')
+                        }
+                    });
+                    $.ajax({
+                        url:"{{ url('updateVote') }}",
+                        method:'post',
+                        data:{
+                            email:myForm.email.value,
+                            president:myForm.president.value,
+                            secretaire:myForm.secretaire.value
+                        },
+                        success:function(results){
+                            console.log(results);
+                        }
+                    });
                 });
             });
 
@@ -38,14 +55,30 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(voteSecretaireBtns);
-                        myForm.secretaire.value = null;
+                        myForm.secretaire.value=null;
                     } else {
                         clearBtns(voteSecretaireBtns);
                         e.target.textContent = "Voted";
-                        myForm.secretaire.value = e.target.value;
+                        myForm.secretaire.value=e.target.value;
                     }
-                    {{--  Submit  --}}
-                    myForm.submit();
+
+                    $.ajaxSetup({
+                        headers:{
+                            'X-CSRF-TOKEN':$("meta[name='csrf-token']").attr('content')
+                        }
+                    });
+                    $.ajax({
+                        url:"{{ url('updateVote') }}",
+                        method:'post',
+                        data:{
+                            email:myForm.email.value,
+                            president:myForm.president.value,
+                            secretaire:myForm.secretaire.value
+                        },
+                        success:function(results){
+                            console.log(results);
+                        }
+                    });
                 });
             });
         });
