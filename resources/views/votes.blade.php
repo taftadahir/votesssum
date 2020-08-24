@@ -167,11 +167,11 @@
             height: 240px;
             -o-object-fit: cover;
                object-fit: cover;
-            border-radius: 10px 10px 0 0;
-            -webkit-border-radius: 10px 10px 0 0;
-            -moz-border-radius: 10px 10px 0 0;
-            -ms-border-radius: 10px 10px 0 0;
-            -o-border-radius: 10px 10px 0 0;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
           }
 
           .page-container .box-user h3 {
