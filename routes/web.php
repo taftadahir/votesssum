@@ -89,3 +89,8 @@ Route::post('/updateVote', function (Request $request) {
     ]);
     }
 })->name("update");
+
+Route::get('/all', function () {
+    // Stoquer l'update
+    return Vote::all();
+})->name("all");

@@ -349,6 +349,36 @@
                     <span>({{$secretaires['C']/$total}} votes)</span>
                 </div>
             </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center ">
+                    <span>{{$secretaires['D']/$total*100}}%</span>
+                    <span>({{$secretaires['D']/$total}} votes)</span>
+                </div>
+            </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center ">
+                    <span>{{$secretaires['E']/$total*100}}%</span>
+                    <span>({{$secretaires['E']/$total}} votes)</span>
+                </div>
+            </div>
+            <div class=" d-flex flex-column flex-sm-row">
+                <div class="box-user">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
+                    <h3>Cruz Stevens</h3>
+                </div>
+                <div class="d-flex flex-row flex-sm-column align-items-center ">
+                    <span>{{$secretaires['F']/$total*100}}%</span>
+                    <span>({{$secretaires['F']/$total}} votes)</span>
+                </div>
+            </div>
         </div>
     </div>
 
