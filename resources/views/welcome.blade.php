@@ -314,12 +314,12 @@
 <body class="mh-100">
     <header class="header">
         <div class="container-xl d-flex justify-content-between align-items-center">
-            <img class="img-fluid logo rounded" src="imgs/phone-booth-203492_1920.jpg" alt="">
+            <img class="img-fluid logo rounded" src="{{asset('imgs/phone-booth-203492_1920.jpg')}}" alt="">
             <div class="d-flex flex-column align-items-center justify-content-center center">
                 <span class="">Welcome to <span>SSSUM</span></span>
                 <span>Election 2020</span>
             </div>
-            <img class="img-fluid logo rounded" src="imgs/04bb29011217e6117774931db30677f2.jpg" alt="">
+            <img class="img-fluid logo rounded" src="{{asset('imgs/04bb29011217e6117774931db30677f2.jpg')}}" alt="">
         </div>
     </header>
 
@@ -337,17 +337,17 @@
         <h2>Candidat au poste de president</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
@@ -357,32 +357,32 @@
         <h2>Candidat au poste de secretaire</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
             <div class="box-user">
-                <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100">Vote</button>
             </div>
@@ -395,7 +395,7 @@
         <div class="d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
@@ -405,7 +405,7 @@
             </div>
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
@@ -415,7 +415,7 @@
             </div>
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
@@ -430,7 +430,7 @@
         <div class=" d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
@@ -440,7 +440,7 @@
             </div>
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
@@ -450,7 +450,7 @@
             </div>
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="imgs/beanie-2562646_1920.jpg" alt="">
+                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center ">
