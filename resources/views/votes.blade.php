@@ -10,6 +10,7 @@
     <script defer>
         $(function() {
             const votePresidentBtns = document.querySelectorAll('.second-page-president .box-user>button');
+            const myForm = document.getElementById('myForm');
             const voteSecretaireBtns = document.querySelectorAll('.second-page-secretaire .box-user>button');
 
             const clearBtns = voteBtns => {
@@ -22,42 +23,14 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(votePresidentBtns);
-                        $.ajax({
-                            url: "{{ route('update') }}",
-                            type: 'POST',
-                            data: {
-                                "email":"{{ $email }}",
-                                "president":null,
-                                "secretaire":null
-                            },
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-                                console.log(data);
-                            }
-                        });
+                        myForm.president.value = null;
                     } else {
                         clearBtns(votePresidentBtns);
                         e.target.textContent = "Voted";
-                        $.ajax({
-                            url: "{{ route('update') }}",
-                            type: 'POST',
-                            data: {
-                                "email":"{{ $email }}",
-                                "president":null,
-                                "secretaire":null
-                            },
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-                                console.log(data);
-                            }
-                        });
+                        myForm.president.value = e.target.value;
                     }
+                    {{--  Submit  --}}
+                    myForm.submit();
                 });
             });
 
@@ -65,42 +38,14 @@
                 voteBtn.addEventListener('click', e => {
                     if (e.target.textContent === "Voted") {
                         clearBtns(voteSecretaireBtns);
-                        $.ajax({
-                            url: "{{ route('update') }}",
-                            type: 'POST',
-                            data: {
-                                "email":"{{ $email }}",
-                                "president":null,
-                                "secretaire":null
-                            },
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-                                console.log(data);
-                            }
-                        });
+                        myForm.secretaire.value = null;
                     } else {
                         clearBtns(voteSecretaireBtns);
                         e.target.textContent = "Voted";
-                        $.ajax({
-                            url: "{{ route('update') }}",
-                            type: 'POST',
-                            data: {
-                                "email":"{{ $email }}",
-                                "president":null,
-                                "secretaire":null
-                            },
-                            headers: {
-                                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                            },
-                            dataType: 'json',
-                            success: function (data) {
-                                console.log(data);
-                            }
-                        });
+                        myForm.secretaire.value = e.target.value;
                     }
+                    {{--  Submit  --}}
+                    myForm.submit();
                 });
             });
         });
@@ -377,7 +322,11 @@
         </div>
     </header>
 
-    <input type="email" name="email" id="email" value="{{ $email }}" hidden>
+    <form action="{{ route('update') }}" method="POST"  hidden  enctype="multipart/form-data" id="myForm">
+        <input type="email" name="email" id="email" value="{{ $email }}">
+        <input type="text" name="president" id="president">
+        <input type="text" name="secretaire" id="secretaire">
+    </form>
 
     <!-- Deuxieme page -->
     <div class="container d-flex flex-column align-items-center second-page-president page-container candidat">

@@ -28,5 +28,5 @@ Route::get('/results', function () {
 })->name("results");
 
 Route::post('/updateVote', function (Request $request) {
-    return "Hi";
+    return $request;
 })->name("update");
