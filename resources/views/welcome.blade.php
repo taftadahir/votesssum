@@ -56,7 +56,7 @@
                 });
             });
 
-            form.addEventListener('submit', e => {
+            {{--  form.addEventListener('submit', e => {
                 e.preventDefault();
 
                 // Ajout du mail dans l'array
@@ -70,7 +70,7 @@
                     candidats[i].classList.remove('hide');
                     // results[i].classList.remove('hide');
                 }
-            });
+            });  --}}
         });
     </script>
     <style>
