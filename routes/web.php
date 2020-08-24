@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::post('/votes', function () {
+Route::post('/votes', function (Request $request) {
     // Stoquer l'email
+    return $request['email'];
     return view('votes');
 })->name("votes");
 Route::get('/results', function () {

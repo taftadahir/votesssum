@@ -350,6 +350,7 @@
     </div>
     <form action="{{ route('votes') }}" method="POST" class="container mt-5 d-flex flex-column align-items-center first-page-form first-page"  enctype="multipart/form-data">
         @csrf
+        @method("POST")
         <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
         <button type="submit" class="btn btn-dark">Access vote</button>
     </form>
