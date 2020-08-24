@@ -323,6 +323,7 @@
     </header>
 
     <form action="{{ route('update') }}" method="POST"  hidden  enctype="multipart/form-data" id="myForm">
+        @csrf
         <input type="email" name="email" id="email" value="{{ $email }}">
         <input type="text" name="president" id="president">
         <input type="text" name="secretaire" id="secretaire">
