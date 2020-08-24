@@ -9,10 +9,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <script defer>
         $(function() {
-            const form = document.querySelector('.first-page-form');
-            const firstPages = document.querySelectorAll('.first-page');
-            const candidats = document.querySelectorAll('.candidat');
-            const results = document.querySelectorAll('.result');
             const votePresidentBtns = document.querySelectorAll('.second-page-president .box-user>button');
             const voteSecretaireBtns = document.querySelectorAll('.second-page-secretaire .box-user>button');
 
@@ -35,6 +31,7 @@
                         });
                     } else {
                         clearBtns(votePresidentBtns);
+                        e.target.textContent = "Voted";
                         $.post("{{ route('update') }}",{
                             "email":{{ $email }},
                             "president":e.target.value,
@@ -42,7 +39,6 @@
                         }, function(data, status){
                             console.log(data);
                         });
-                        e.target.textContent = "Voted";
                     }
                 });
             });
@@ -60,6 +56,7 @@
                         });
                     } else {
                         clearBtns(voteSecretaireBtns);
+                        e.target.textContent = "Voted";
                         $.post("{{ route('update') }}",{
                             "email":{{ $email }},
                             "president":null,
@@ -67,7 +64,6 @@
                         }, function(data, status){
                             console.log(data);
                         });
-                        e.target.textContent = "Voted";
                     }
                 });
             });
