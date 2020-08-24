@@ -66,8 +66,8 @@
 
                 for (let i = 0; i < 2; i++) {
                     // console.log(firstPages[i]);
-                    firstPages[i].classList.add('hide');
-                    candidats[i].classList.remove('hide');
+                    {{--  firstPages[i].classList.add('hide');  --}}
+                    {{--  candidats[i].classList.remove('hide');  --}}
                     // results[i].classList.remove('hide');
                 }
             });
