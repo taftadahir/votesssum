@@ -23,7 +23,7 @@
                     if (e.target.textContent === "Voted") {
                         clearBtns(votePresidentBtns);
                         $.post("{{ route('update') }}",{
-                            "email":{{ $email }},
+                            "email":"{{ $email }}",
                             "president":null,
                             "secretaire":null
                         }, function(data, status){
@@ -33,7 +33,7 @@
                         clearBtns(votePresidentBtns);
                         e.target.textContent = "Voted";
                         $.post("{{ route('update') }}",{
-                            "email":{{ $email }},
+                            "email":"{{ $email }}",
                             "president":e.target.value,
                             "secretaire":null
                         }, function(data, status){
