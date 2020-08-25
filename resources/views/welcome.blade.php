@@ -13,6 +13,21 @@
             font-weight: normal;
           }
 
+          .bg{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              top: 0;
+              left: 0;
+              background: #00000096;
+              height: 100vh;
+          }
+
+          .bg-inside{
+              {{--  background: #C5E6A6 !important;  --}}
+              background: #90E39A !important;
+          }
+
           .hide {
             display: none !important;
           }
@@ -332,6 +347,13 @@
         </div>
     </footer>
 
+    <div class="bg position-absolute d-none w-100" id="bg-finish">
+        <div class="alert bg-inside container-xl" role="alert">
+            <h4 class="alert-heading mt-1">Alert!</h4>
+            <p>The Election has successfully ended! The Electoral Committee will announce the Result shortly.</p>
+        </div>
+    </div>
+
     <script>
 
        $(function() {
@@ -352,7 +374,10 @@
               }
               if(diffTime<=0){
                 clearInterval(time);
-              }
+                document.querySelector('body').style.height = "100vh";
+                document.querySelector('body').style.overflow = "hidden";
+                document.querySelector('.bg-finish').classList.remove('d-none');
+            }
               timer.textContent = `${day}days : ${hour}hours : ${minute}minutes : ${second}seconds`;
             },1000);
        });

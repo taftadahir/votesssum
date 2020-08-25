@@ -364,7 +364,7 @@
 
     <!-- Deuxieme page -->
     <div class="container d-flex flex-column align-items-center second-page-president page-container candidat">
-        <h2>Candidat au poste de president</h2>
+        <h2>Candidates for Presidential Post</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
@@ -384,7 +384,7 @@
         </div>
     </div>
     <div class="container second-page-secretaire d-flex flex-column align-items-center page-container candidat">
-        <h2>Candidat au poste de secretaire</h2>
+        <h2>Candidates for the Post of Secretary General</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
