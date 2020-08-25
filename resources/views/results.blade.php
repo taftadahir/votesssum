@@ -289,7 +289,7 @@
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>
-                        {{$presidents['A']/$totalPresident*100}}%
+                        {{number_format($secretaires['A']/$totalPresident*100, 2, '.', ',')}}%
                     </span>
                     <span>({{$presidents['A']}}/{{$totalPresident}} votes)</span>
                 </div>
@@ -300,7 +300,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$presidents['B']/$totalPresident*100}}%</span>
+                    <span>{{number_format($secretaires['B']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['B']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
@@ -310,7 +310,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$presidents['C']/$totalPresident*100}}%</span>
+                    <span>{{number_format($secretaires['C']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['C']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
@@ -325,7 +325,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$secretaires['A']/$totalSecretaire*100}}%</span>
+                    <span>{{number_format($secretaires['A']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['A']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
@@ -335,7 +335,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{$secretaires['B']/$totalSecretaire*100}}%</span>
+                    <span>{{number_format($secretaires['B']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['B']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
@@ -345,7 +345,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['C']/$totalSecretaire*100}}%</span>
+                    <span>{{number_format($secretaires['C']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['C']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
@@ -355,7 +355,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['D']/$totalSecretaire*100}}%</span>
+                    <span>{{number_format($secretaires['D']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['D']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
@@ -365,7 +365,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['E']/$totalSecretaire*100}}%</span>
+                    <span>{{number_format($secretaires['E']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['E']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
@@ -375,7 +375,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center ">
-                    <span>{{$secretaires['F']/$totalSecretaire*100}}%</span>
+                    <span>{{number_format($secretaires['F']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['F']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>

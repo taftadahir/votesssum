@@ -22,7 +22,8 @@ Route::get('/', function () {
 Route::post('/votes', function (Request $request) {
     // Verifier que l'email exists
     $emails = [
-        "taftadjani@gmail.com"
+        "taftadjani@gmail.com",
+        "moseshakim24@gmail.com"
     ];
     $email_verif=false;
     for ($i=0; $i < count($emails); $i++) {
