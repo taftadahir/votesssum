@@ -42,12 +42,12 @@
 
           .first-page-content {
             font-size: 30px;
-            margin-top: 150px;
+            margin-top: 50px;
             text-align: center;
             font-weight: 400;
             padding: 0 30px;
             color: #707070;
-            margin-bottom: 100px;
+            margin-bottom: 50px;
           }
 
           .first-page-form * {
@@ -263,6 +263,12 @@
               font-size: 12px;
             }
           }
+
+          .text-style{
+            font-weight:600;
+            letter-spacing:1.5px;
+            font-size:25px;
+          }
     </style>
 </head>
 
@@ -278,9 +284,15 @@
         </div>
     </header>
 
+  {{-- Timer --}}
+  <div class="container mt-5">
+    <div class="alert alert-info text-center text-style" role="alert" id="timer">
+    </div>
+  </div>
+
     <!-- Premiere page -->
     <div class="container first-page-content first-page">
-        Considering the situation of covid-19 pandemie, we decided to make this election through our Online platform for voting. It's open for all South Sudanese Students in the Kingdom of Morocco.
+        Considering the situation of covid-19 pandemie, we decided to make this election through our Online platform for voting. It s open for all South Sudanese Students in the Kingdom of Morocco.
     </div>
     <form action="{{ route('votes') }}" method="POST" class="container mt-5 d-flex flex-column align-items-center first-page-form first-page"  enctype="multipart/form-data">
         @csrf
@@ -295,6 +307,24 @@
             <span>Done by Taftadjani Dahirou</span>
         </div>
     </footer>
+
+    <script>
+
+       $(function() {
+            const timer=document.querySelector('#timer');
+            const endTime = new Date(2020, 7, 30, 23, 59, 59, 1000);
+            setInterval(_=>{
+            const nowTime = new Date();
+            const diffTime = endTime.getTime() - nowTime.getTime();
+            const day = Math.ceil(diffTime/(1000*60*60*24));
+            const hour = Math.ceil((diffTime%(1000*60*60*24))/(1000*60*60));
+            const minute = Math.ceil(((diffTime%(1000*60*60*24))%(1000*60*60))/(1000*60));
+            const second = Math.ceil((((diffTime%(1000*60*60*24))%(1000*60*60))%(1000*60))/(1000));
+            timer.textContent = `${day}days : ${hour}hours : ${minute}minutes : ${second}seconds`;
+
+            },1000);
+       });
+    </script>
 </body>
 
 </html>

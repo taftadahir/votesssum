@@ -120,3 +120,9 @@ Route::post('/valider', function (Request $request) {
     $email =  $request->email;
     return view('valider', compact("email"));
 })->name("valider");
+
+
+Route::get('/timer', function () {
+    $timerEnd = new DateTime();
+    return $timerEnd->getTimestamp();
+})->name("timer");
