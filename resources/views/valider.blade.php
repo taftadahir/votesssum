@@ -286,7 +286,7 @@
 
     <div class="container-xl">
         <div class="alert alert-success my-5" role="alert">
-            <h4 class="alert-heading mt-2">Your votes have been successfully registered!</h4>
+            <h4 class="alert-heading mt-2">Your vote has successfully been registered. Thank you for voting!</h4>
             <div class="mt-5 mb-2">
                 Poduct and Services brought possible by HakTech, For more about HakTech click the link <a href="https://www.facebook.com/HakTech-106367504412775/" target="_blank">HakTech.facebook.com</a>
             </div>
