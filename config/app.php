@@ -229,4 +229,9 @@ return [
 
     ],
 
+    'emails' => [
+        "taftadjani@gmail.com",
+        "moseshakim24@gmail.com"
+    ]
+
 ];

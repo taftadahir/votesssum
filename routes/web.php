@@ -19,12 +19,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 Route::post('/votes', function (Request $request) {
     // Verifier que l'email exists
-    $emails = [
-        "taftadjani@gmail.com",
-        "moseshakim24@gmail.com"
-    ];
+    $emails=config('app.emails');
+    // return $emails;
     $email_verif=false;
     for ($i=0; $i < count($emails); $i++) {
         if ($request['email'] === $emails[$i]) {
@@ -117,7 +116,19 @@ Route::get('/all', function () {
 
 Route::post('/valider', function (Request $request) {
     // Stoquer l'update
+    $emails=config('app.emails');
+
     $email =  $request->email;
+
+    if (($key = array_search($email, $emails)) !== false) {
+        unset($emails[$key]);
+    }
+
+    config(['app.emails'=>$emails]);
+
+    $emails=config('app.emails');
+    return $emails;
+
     return view('valider', compact("email"));
 })->name("valider");
 
