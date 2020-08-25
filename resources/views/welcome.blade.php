@@ -319,7 +319,7 @@
                 {{ $errors->first('error') }}
             </div>
         @endif
-        <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
+        <input class="form-control" type="text" name="email" placeholder="Enter your code" required>
         <button type="submit" class="btn btn-primary">Access vote</button>
     </form>
 

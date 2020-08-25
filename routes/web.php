@@ -35,7 +35,7 @@ Route::post('/votes', function (Request $request) {
     if ($email_verif) {
         return view('votes',['email'=>$request['email']]);
     }else{
-        return redirect()->back()->withErrors(["error"=>"Votre emails ne figure pas dans la liste"]);
+        return redirect()->back()->withErrors(["error"=>"You have already voted or your code is invalid!!!" ]);
     }
 })->name("votes");
 
