@@ -431,7 +431,9 @@
     <footer class="footer">
         <div class="container-xl flex-sm-row flex-column d-flex justify-content-sm-between justify-content-center align-items-center h-100">
             <span>SSSUM#2020Election</span>
-            <span>Done by HakTech</span>
+            <span>Done by HakTech
+                <img class="ml-2 rounded-circle" src="{{asset('imgs/WhatsApp Image 2020-08-25 at 17.42.44.jpeg')}}" alt="" width="50" height="50">
+            </span>
         </div>
     </footer>
 </body>
