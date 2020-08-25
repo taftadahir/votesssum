@@ -126,8 +126,22 @@ Route::post('/valider', function (Request $request) {
     return view('valider');
 })->name("valider");
 
-
 Route::get('/timer', function () {
     $timerEnd = new DateTime();
     return $timerEnd->getTimestamp();
 })->name("timer");
+
+Route::get('addMail', function () {
+    return view('addMail');
+})->name("addMail");
+Route::post('/addMail', function (Request $request) {
+    // Insert the mail
+    DB::table('emails')->insert([
+        [
+            'email'=>$request['email'],
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ]
+    ]);
+    return redirect()->back();
+});
