@@ -292,7 +292,7 @@
 <body class="mh-100">
     <header class="header">
         <div class="container-xl d-flex justify-content-between align-items-center">
-            <img class="img-fluid logo rounded" src="{{asset('imgs/phone-booth-203492_1920.jpg')}}" alt="">
+            <img class="img-fluid logo rounded" src="{{asset('imgs/WhatsApp Image 2020-08-25 at 13.43.14.jpeg')}}" alt="">
             <div class="d-flex flex-column align-items-center justify-content-center center">
                 <span class="">Welcome to <span>SSSUM</span></span>
                 <span>Election 2020</span>
@@ -326,7 +326,9 @@
     <footer class="footer">
         <div class="container-xl flex-sm-row flex-column d-flex justify-content-sm-between justify-content-center align-items-center h-100">
             <span>SSSUM#2020Election</span>
-            <span>Done by Taftadjani Dahirou</span>
+            <span>Done by HakTech
+                <img class="ml-2 rounded-circle" src="{{asset('imgs/WhatsApp Image 2020-08-25 at 17.42.44.jpeg')}}" alt="" width="50" height="50">
+            </span>
         </div>
     </footer>
 
