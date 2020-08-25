@@ -52,17 +52,18 @@
 
           .first-page-form * {
             width: 100%;
-            height: 70px;
             max-width: 900px;
           }
 
           .first-page-form input {
+            height: 70px;
             text-align: center;
             margin-bottom: 15px;
             font-size: 25px;
           }
 
           .first-page-form button {
+            height: 70px;
             margin-bottom: 100px;
             font-size: 30px;
           }
@@ -132,7 +133,7 @@
             color: #707070;
             font-size: 20px;
           }
-          
+
 
           .text-style{
             font-weight:600;
@@ -141,7 +142,7 @@
           }
 
           @media only screen and (max-width: 768px) {
-            
+
 
           .text-style{
             font-weight:600;
@@ -175,15 +176,16 @@
             }
             .first-page-form * {
               width: 100%;
-              height: 60px;
               max-width: 900px;
             }
             .first-page-form input {
-              text-align: center;
-              margin-bottom: 15px;
-              font-size: 20px;
+                height: 60px;
+                text-align: center;
+                margin-bottom: 15px;
+                font-size: 20px;
             }
             .first-page-form button {
+                height: 60px;
               margin-bottom: 100px;
               font-size: 25px;
             }
@@ -237,15 +239,16 @@
             }
             .first-page-form * {
               width: 100%;
-              height: 50px;
               max-width: 900px;
             }
             .first-page-form input {
-              text-align: center;
-              margin-bottom: 15px;
-              font-size: 20px;
+                height: 50px;
+                text-align: center;
+                margin-bottom: 15px;
+                font-size: 20px;
             }
             .first-page-form button {
+                height: 50px;
               margin-bottom: 100px;
               font-size: 20px;
             }
@@ -311,6 +314,11 @@
     <form action="{{ route('votes') }}" method="POST" class="container mt-5 d-flex flex-column align-items-center first-page-form first-page"  enctype="multipart/form-data">
         @csrf
         @method("POST")
+        @if($errors->has('error'))
+            <div class="alert alert-danger pl-3" role="alert">
+                {{ $errors->first('error') }}
+            </div>
+        @endif
         <input class="form-control" type="email" name="email" placeholder="Enter your email" required>
         <button type="submit" class="btn btn-primary">Access vote</button>
     </form>

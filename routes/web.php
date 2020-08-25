@@ -1,5 +1,6 @@
 <?php
 
+use App\Emails;
 use App\Vote;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -22,11 +23,11 @@ Route::get('/', function () {
 
 Route::post('/votes', function (Request $request) {
     // Verifier que l'email exists
-    $emails=config('app.emails');
+    $emails=Emails::all();
     // return $emails;
     $email_verif=false;
     for ($i=0; $i < count($emails); $i++) {
-        if ($request['email'] === $emails[$i]) {
+        if ($request['email'] === $emails[$i]->email) {
             $email_verif=true;
         break;
         }
@@ -34,9 +35,10 @@ Route::post('/votes', function (Request $request) {
     if ($email_verif) {
         return view('votes',['email'=>$request['email']]);
     }else{
-        return redirect()->back();
+        return redirect()->back()->withErrors(["error"=>"Votre emails ne figure pas dans la liste"]);
     }
 })->name("votes");
+
 Route::get('/results', function () {
     $presidents=[
         "A"=>0,
@@ -116,20 +118,12 @@ Route::get('/all', function () {
 
 Route::post('/valider', function (Request $request) {
     // Stoquer l'update
-    $emails=config('app.emails');
-
     $email =  $request->email;
 
-    if (($key = array_search($email, $emails)) !== false) {
-        unset($emails[$key]);
-    }
+    $email_result=    Emails::where('email',$email)->delete();
 
-    config(['app.emails'=>$emails]);
 
-    $emails=config('app.emails');
-    return $emails;
-
-    return view('valider', compact("email"));
+    return view('valider');
 })->name("valider");
 
 

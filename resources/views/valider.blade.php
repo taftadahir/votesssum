@@ -288,13 +288,8 @@
         <div class="alert alert-success my-5" role="alert">
             <h4 class="alert-heading">Your votes have been successfully registered!</h4>
 
-                <form action="{{ route('votes') }}" class="d-inline" method="POST" id="myForm" enctype="multipart/form-data">
-                    @csrf
-                    @method("POST")
-                    <input class="form-control" type="email" name="email" hidden value="{{ $email }}">
-                    <p class="d-inline">Incase if you made a mistake in your voting choice, you can make a new choice by clicking the link  </p>
-                    <a type="submit" onclick="document.querySelector('#myForm').submit()" class=""><u>Access vote</u></a>
-                </form>
+                <p class="d-inline">Incase if you made a mistake in your voting choice, you can make a new choice by clicking the link  </p>
+
 
         </div>
     </div>
