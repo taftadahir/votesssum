@@ -132,8 +132,22 @@
             color: #707070;
             font-size: 20px;
           }
+          
+
+          .text-style{
+            font-weight:600;
+            letter-spacing:1.5px;
+            font-size:25px;
+          }
 
           @media only screen and (max-width: 768px) {
+            
+
+          .text-style{
+            font-weight:600;
+            letter-spacing:1.5px;
+            font-size:20px;
+          }
             .header {
               margin-top: 60px;
             }
@@ -190,6 +204,12 @@
             .header {
               margin-top: 60px;
             }
+
+          .text-style{
+            font-weight:600;
+            letter-spacing:1.5px;
+            font-size:18px;
+          }
             .header .logo {
               width: 60px;
               height: 60px;
@@ -208,12 +228,12 @@
             }
             .first-page-content {
               font-size: 20px;
-              margin-top: 100px;
+              margin-top: 50px;
               text-align: center;
               font-weight: 500;
               padding: 0 20px;
               color: #707070;
-              margin-bottom: 100px;
+              margin-bottom: 50px;
             }
             .first-page-form * {
               width: 100%;
@@ -262,12 +282,6 @@
             .footer > div span:last-child {
               font-size: 12px;
             }
-          }
-
-          .text-style{
-            font-weight:600;
-            letter-spacing:1.5px;
-            font-size:25px;
           }
     </style>
 </head>
