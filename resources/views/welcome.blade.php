@@ -327,15 +327,23 @@
        $(function() {
             const timer=document.querySelector('#timer');
             const endTime = new Date(2020, 7, 30, 23, 59, 59, 1000);
-            setInterval(_=>{
-            const nowTime = new Date();
-            const diffTime = endTime.getTime() - nowTime.getTime();
-            const day = Math.ceil(diffTime/(1000*60*60*24));
-            const hour = Math.ceil((diffTime%(1000*60*60*24))/(1000*60*60));
-            const minute = Math.ceil(((diffTime%(1000*60*60*24))%(1000*60*60))/(1000*60));
-            const second = Math.ceil((((diffTime%(1000*60*60*24))%(1000*60*60))%(1000*60))/(1000));
-            timer.textContent = `${day}days : ${hour}hours : ${minute}minutes : ${second}seconds`;
-
+            const time = setInterval(_=>{
+              const nowTime = new Date();
+              const diffTime = endTime.getTime() - nowTime.getTime();
+              let day = 0;
+              let hour = 0;
+              let minute = 0;
+              let second = 0;
+              if (diffTime>=0){
+                day = Math.ceil(diffTime/(1000*60*60*24));
+                hour = Math.ceil((diffTime%(1000*60*60*24))/(1000*60*60));
+                minute = Math.ceil(((diffTime%(1000*60*60*24))%(1000*60*60))/(1000*60));
+                second = Math.ceil((((diffTime%(1000*60*60*24))%(1000*60*60))%(1000*60))/(1000));
+              }
+              if(diffTime<=0){
+                clearInterval(time);
+              }
+              timer.textContent = `${day}days : ${hour}hours : ${minute}minutes : ${second}seconds`;
             },1000);
        });
     </script>
