@@ -289,7 +289,7 @@
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>
-                        {{number_format($secretaires['A']/$totalPresident*100, 2, '.', ',')}}%
+                        {{number_format($presidents['A']/$totalPresident*100, 2, '.', ',')}}%
                     </span>
                     <span>({{$presidents['A']}}/{{$totalPresident}} votes)</span>
                 </div>
@@ -300,7 +300,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{number_format($secretaires['B']/$totalPresident*100, 2, '.', ',')}}%</span>
+                    <span>{{number_format($presidents['B']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['B']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
@@ -310,7 +310,7 @@
                     <h3>Cruz Stevens</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{number_format($secretaires['C']/$totalPresident*100, 2, '.', ',')}}%</span>
+                    <span>{{number_format($presidents['C']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['C']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
