@@ -290,7 +290,7 @@
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($presidents['Achwany Simon Eto']/$totalPresident*100, 2, '.', ',')}}%
                     </span>
-                    <span>({{$presidents['A']}}/{{$totalPresident}} votes)</span>
+                    <span>({{$presidents['Achwany Simon Eto']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
@@ -299,7 +299,7 @@
                     <h3>Awar Kon Awet</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{number_format($presidents['B']/$totalPresident*100, 2, '.', ',')}}%</span>
+                    <span>{{number_format($presidents['Awar Kon Awet']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['Awar Kon Awet']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
@@ -324,7 +324,7 @@
                     <h3>Moses Machar</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{number_format($secretaires['A']/$totalSecretaire*100, 2, '.', ',')}}%</span>
+                    <span>{{number_format($secretaires['Moses Machar']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['Moses Machar']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
@@ -334,7 +334,7 @@
                     <h3>David Sebit</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{number_format($secretaires['B']/$totalSecretaire*100, 2, '.', ',')}}%</span>
+                    <span>{{number_format($secretaires['David Sebit']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['David Sebit']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
