@@ -389,7 +389,7 @@
             <div class="box-user">
                 <img src="{{asset('imgs/secretaire_1.jpeg')}}" alt="">
                 <h3>Moses Machar</h3>
-                <button class="btn btn-dark w-100" value="Moses Machars">Vote</button>
+                <button class="btn btn-dark w-100" value="Moses Machar">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/secretaire_2.jpeg')}}" alt="">

@@ -280,7 +280,7 @@
 
     <!-- Troisieme page -->
     <div class="container page-container third-page-container result">
-        <h2>Resultat des elections au poste de President</h2>
+        <h2>Results for the post of Presidency</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
@@ -316,7 +316,7 @@
         </div>
     </div>
     <div class="container page-container third-page-container result">
-        <h2>Resultat des elections au poste de secretaire</h2>
+        <h2>Results for the post of Secretary General</h2>
         <div class=" d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
