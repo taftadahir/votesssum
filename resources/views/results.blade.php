@@ -284,27 +284,26 @@
         <div class="d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
+                    <img src="{{asset('imgs/president_1.jpeg')}}" alt="">
+                    <h3>Achwany Simon Eto</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>
-                        {{number_format($presidents['A']/$totalPresident*100, 2, '.', ',')}}%
+                    <span>{{number_format($presidents['A']/$totalPresident*100, 2, '.', ',')}}%
                     </span>
                     <span>({{$presidents['A']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
+                    <img src="{{asset('imgs/president_2.jpeg')}}" alt="">
+                    <h3>Awar Kon Awet</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($presidents['B']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['B']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
-            <div class=" d-flex flex-column flex-sm-row">
+            {{--  <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
                     <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
@@ -313,7 +312,7 @@
                     <span>{{number_format($presidents['C']/$totalPresident*100, 2, '.', ',')}}%</span>
                     <span>({{$presidents['C']}}/{{$totalPresident}} votes)</span>
                 </div>
-            </div>
+            </div>  --}}
         </div>
     </div>
     <div class="container page-container third-page-container result">
@@ -321,8 +320,8 @@
         <div class=" d-flex flex-wrap justify-content-center">
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
+                    <img src="{{asset('imgs/secretaire_1.jpeg')}}" alt="">
+                    <h3>Moses Machar</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($secretaires['A']/$totalSecretaire*100, 2, '.', ',')}}%</span>
@@ -331,15 +330,15 @@
             </div>
             <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
-                    <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                    <h3>Cruz Stevens</h3>
+                    <img src="{{asset('imgs/secretaire_2.jpeg')}}" alt="">
+                    <h3>David Sebit</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($secretaires['B']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['B']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
-            <div class=" d-flex flex-column flex-sm-row">
+            {{--  <div class=" d-flex flex-column flex-sm-row">
                 <div class="box-user">
                     <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                     <h3>Cruz Stevens</h3>
@@ -378,7 +377,7 @@
                     <span>{{number_format($secretaires['F']/$totalSecretaire*100, 2, '.', ',')}}%</span>
                     <span>({{$secretaires['F']}}/{{$totalSecretaire}} votes)</span>
                 </div>
-            </div>
+            </div>  --}}
         </div>
     </div>
 

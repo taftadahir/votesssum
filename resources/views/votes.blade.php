@@ -367,36 +367,36 @@
         <h2>Candidates for Presidential Post</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
-                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                <h3>Cruz Stevens</h3>
+                <img src="{{asset('imgs/president_1.jpeg')}}" alt="">
+                <h3>Achwany Simon Eto</h3>
                 <button class="btn btn-dark w-100" value="A">Vote</button>
             </div>
             <div class="box-user">
-                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                <h3>Cruz Stevens</h3>
+                <img src="{{asset('imgs/president_2.jpeg')}}" alt="">
+                <h3>Awar Kon Awet</h3>
                 <button class="btn btn-dark w-100" value="B">Vote</button>
             </div>
-            <div class="box-user">
+            {{--  <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100" value="C">Vote</button>
-            </div>
+            </div>  --}}
         </div>
     </div>
     <div class="container second-page-secretaire d-flex flex-column align-items-center page-container candidat">
         <h2>Candidates for the Post of Secretary General</h2>
         <div class="d-flex flex-wrap justify-content-center">
             <div class="box-user">
-                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                <h3>Cruz Stevens</h3>
+                <img src="{{asset('imgs/secretaire_1.jpeg')}}" alt="">
+                <h3>Moses Machar</h3>
                 <button class="btn btn-dark w-100" value="A">Vote</button>
             </div>
             <div class="box-user">
-                <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
-                <h3>Cruz Stevens</h3>
+                <img src="{{asset('imgs/secretaire_2.jpeg')}}" alt="">
+                <h3>David Sebit</h3>
                 <button class="btn btn-dark w-100" value="B">Vote</button>
             </div>
-            <div class="box-user">
+            {{--  <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100" value="C">Vote</button>
@@ -415,7 +415,7 @@
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
                 <h3>Cruz Stevens</h3>
                 <button class="btn btn-dark w-100" value="F">Vote</button>
-            </div>
+            </div>  --}}
         </div>
     </div>
 
