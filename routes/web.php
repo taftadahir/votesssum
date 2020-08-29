@@ -87,7 +87,7 @@ Route::get('/results', function () {
         $totalSecretaire += $secretaires[$key];
     }
     // return $secretaires;
-    return view('results',['totalSecretaire'=>$totalSecretaire,'totalPresident'=>$totalPresident, 'presidents'=>$presidents, 'secretaires'=>$secretaires]);
+    return view('results',['totalSecretaire'=>$totalSecretaire==0?1:$totalSecretaire,'totalPresident'=>$totalPresident==0?1:$totalPresident, 'presidents'=>$presidents, 'secretaires'=>$secretaires]);
 })->name("results");
 
 Route::post('/updateVote', function (Request $request) {
