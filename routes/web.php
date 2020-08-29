@@ -41,17 +41,12 @@ Route::post('/votes', function (Request $request) {
 
 Route::get('/results', function () {
     $presidents=[
-        "A"=>0,
-        "B"=>0,
-        "C"=>0
+        "Achwany Simon Eto"=>0,
+        "Awar Kon Awet"=>0,
     ];
     $secretaires=[
-        "A"=>0,
-        "B"=>0,
-        "C"=>0,
-        "D"=>0,
-        "E"=>0,
-        "F"=>0,
+        "Moses Machar"=>0,
+        "David Sebit"=>0,
     ];
     $totalPresident = 0;
     $totalSecretaire = 0;

@@ -369,12 +369,12 @@
             <div class="box-user">
                 <img src="{{asset('imgs/president_1.jpeg')}}" alt="">
                 <h3>Achwany Simon Eto</h3>
-                <button class="btn btn-dark w-100" value="A">Vote</button>
+                <button class="btn btn-dark w-100" value="Achwany Simon Eto">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/president_2.jpeg')}}" alt="">
                 <h3>Awar Kon Awet</h3>
-                <button class="btn btn-dark w-100" value="B">Vote</button>
+                <button class="btn btn-dark w-100" value="Awar Kon Awet">Vote</button>
             </div>
             {{--  <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">
@@ -389,12 +389,12 @@
             <div class="box-user">
                 <img src="{{asset('imgs/secretaire_1.jpeg')}}" alt="">
                 <h3>Moses Machar</h3>
-                <button class="btn btn-dark w-100" value="A">Vote</button>
+                <button class="btn btn-dark w-100" value="Moses Machars">Vote</button>
             </div>
             <div class="box-user">
                 <img src="{{asset('imgs/secretaire_2.jpeg')}}" alt="">
                 <h3>David Sebit</h3>
-                <button class="btn btn-dark w-100" value="B">Vote</button>
+                <button class="btn btn-dark w-100" value="David Sebit">Vote</button>
             </div>
             {{--  <div class="box-user">
                 <img src="{{asset('imgs/beanie-2562646_1920.jpg')}}" alt="">

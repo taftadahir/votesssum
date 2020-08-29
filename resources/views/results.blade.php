@@ -288,7 +288,7 @@
                     <h3>Achwany Simon Eto</h3>
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
-                    <span>{{number_format($presidents['A']/$totalPresident*100, 2, '.', ',')}}%
+                    <span>{{number_format($presidents['Achwany Simon Eto']/$totalPresident*100, 2, '.', ',')}}%
                     </span>
                     <span>({{$presidents['A']}}/{{$totalPresident}} votes)</span>
                 </div>
@@ -300,7 +300,7 @@
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($presidents['B']/$totalPresident*100, 2, '.', ',')}}%</span>
-                    <span>({{$presidents['B']}}/{{$totalPresident}} votes)</span>
+                    <span>({{$presidents['Awar Kon Awet']}}/{{$totalPresident}} votes)</span>
                 </div>
             </div>
             {{--  <div class=" d-flex flex-column flex-sm-row">
@@ -325,7 +325,7 @@
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($secretaires['A']/$totalSecretaire*100, 2, '.', ',')}}%</span>
-                    <span>({{$secretaires['A']}}/{{$totalSecretaire}} votes)</span>
+                    <span>({{$secretaires['Moses Machar']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
             <div class=" d-flex flex-column flex-sm-row">
@@ -335,7 +335,7 @@
                 </div>
                 <div class="d-flex flex-row flex-sm-column align-items-center">
                     <span>{{number_format($secretaires['B']/$totalSecretaire*100, 2, '.', ',')}}%</span>
-                    <span>({{$secretaires['B']}}/{{$totalSecretaire}} votes)</span>
+                    <span>({{$secretaires['David Sebit']}}/{{$totalSecretaire}} votes)</span>
                 </div>
             </div>
             {{--  <div class=" d-flex flex-column flex-sm-row">
