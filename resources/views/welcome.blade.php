@@ -358,7 +358,7 @@
 
        $(function() {
             const timer=document.querySelector('#timer');
-            const endTime = new Date(2020, 7, 30, 23, 59, 59, 1000);
+            const endTime = new Date(2020, 8, 1, 21, 0, 0, 0);
             const time = setInterval(_=>{
               const nowTime = new Date();
               const diffTime = endTime.getTime() - nowTime.getTime();

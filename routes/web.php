@@ -123,12 +123,6 @@ Route::post('/valider', function (Request $request) {
     return view('valider');
 })->name("valider");
 
-Route::get('/timer', function () {
-    return "Not available";
-    $timerEnd = new DateTime();
-    return $timerEnd->getTimestamp();
-})->name("timer");
-
 Route::get('addCode', function () {
     return "Not available";
     return view('addCode');
