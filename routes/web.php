@@ -22,6 +22,7 @@ Route::get('/', function () {
 });
 
 Route::post('/votes', function (Request $request) {
+    return "Not available";
     // Verifier que l'email exists
     $emails=Emails::all();
     // return $emails;
@@ -40,6 +41,7 @@ Route::post('/votes', function (Request $request) {
 })->name("votes");
 
 Route::get('/results', function () {
+    return "Not available";
     $presidents=[
         "Achwany Simon Eto"=>0,
         "Awar Kon Awet"=>0,
@@ -86,6 +88,7 @@ Route::get('/results', function () {
 })->name("results");
 
 Route::post('/updateVote', function (Request $request) {
+    return "Not available";
     // Stoquer l'update
     $vote = Vote::where('email', $request['email'])->first();
     if ($vote) {
@@ -107,29 +110,31 @@ Route::post('/updateVote', function (Request $request) {
 })->name("update");
 
 Route::get('/all', function () {
+    return "Not available";
     // Stoquer l'update
     return Vote::all();
 })->name("all");
 
 Route::post('/valider', function (Request $request) {
+    return "Not available";
     // Stoquer l'update
     $email =  $request->email;
-
     $email_result=    Emails::where('email',$email)->delete();
-
-
     return view('valider');
 })->name("valider");
 
 Route::get('/timer', function () {
+    return "Not available";
     $timerEnd = new DateTime();
     return $timerEnd->getTimestamp();
 })->name("timer");
 
-Route::get('addMail', function () {
-    return view('addMail');
-})->name("addMail");
-Route::post('/addMail', function (Request $request) {
+Route::get('addCode', function () {
+    return "Not available";
+    return view('addCode');
+})->name("addCode");
+Route::post('/addCode', function (Request $request) {
+    return "Not available";
     // Insert the mail
     DB::table('emails')->insert([
         [

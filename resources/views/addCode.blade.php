@@ -274,7 +274,7 @@
 
 <body class="mh-100">
     <div class="container-xl">
-        <form class="form-group mt-5" action="{{ route('addMail') }}" method="POST"    enctype="multipart/form-data" id="myForm">
+        <form class="form-group mt-5" action="{{ route('addCode') }}" method="POST"    enctype="multipart/form-data" id="myForm">
             @csrf
             <input class="form-control" type="text" name="email" id="email" value="" placeholder="code">
             <button class="btn btn-primary mt-2" type="submit">Add</button>
