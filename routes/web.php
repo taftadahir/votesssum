@@ -124,11 +124,9 @@ Route::post('/valider', function (Request $request) {
 })->name("valider");
 
 Route::get('addCode', function () {
-    return "Not available";
     return view('addCode');
 })->name("addCode");
 Route::post('/addCode', function (Request $request) {
-    return "Not available";
     // Insert the mail
     DB::table('emails')->insert([
         [
