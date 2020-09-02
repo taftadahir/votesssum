@@ -18,11 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return "The voting is closed !";
     return view('welcome');
 });
 
 Route::post('/votes', function (Request $request) {
-    // return "you can't access the Voting now, It will start tomorrow morning from 9am to 9pm";
+    return "The voting is closed !";
     // Verifier que l'email exists
     $emails = Emails::all();
     // return $emails;
@@ -87,6 +88,7 @@ Route::get('/results', function () {
 })->name("results");
 
 Route::post('/updateVote', function (Request $request) {
+    return "The voting is closed !";
     // Stoquer l'update
     $vote = Vote::where('email', $request['email'])->first();
     if ($vote) {
@@ -113,6 +115,7 @@ Route::get('/all', function () {
 })->name("all");
 
 Route::post('/valider', function (Request $request) {
+    return "The voting is closed !";
     // Stoquer l'update
     $email =  $request->email;
     $email_result =    Emails::where('email', $email)->delete();
@@ -120,10 +123,12 @@ Route::post('/valider', function (Request $request) {
 })->name("valider");
 
 Route::get('addCode', function () {
+    return "The voting is closed !";
     return view('addCode');
 })->name("addCode");
 
 Route::post('/addCode', function (Request $request) {
+    return "The voting is closed !";
     // Insert the mail
     DB::table('emails')->insert([
         [
