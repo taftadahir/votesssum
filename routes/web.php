@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::post('/votes', function (Request $request) {
-    return "you can't access the Voting now, It will start tomorrow morning from 9am to 9pm";
+    // return "you can't access the Voting now, It will start tomorrow morning from 9am to 9pm";
     // Verifier que l'email exists
     $emails = Emails::all();
     // return $emails;
